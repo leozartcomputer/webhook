@@ -8,14 +8,14 @@ services:
     env_file:
       - .env
     #environment:
-      #- SERVICE_SECRET=3b9bd72f20b59444a4a90805f3d5c47f68c357471c838ed50bc4bc5cc8f99161
-      #- PW_urlSupa=http://rest:3000/
-      #- PW_apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzQ0ODQwODAwLAogICJleHAiOiAxOTAyNjA3MjAwCn0.8B4F4LY7FebkryNZDvKuzhCgL4clt1ZzY6Vq7CX10KI
-      #- PW_user=artmariadb
-      #- PW_password=EUA4Jmz5n%dD2
-      #- PW_host=172.17.0.1
-      #- PW_database=art
-      #- PW_portdb=3306
+      #- SERVICE_SECRET=
+      #- PW_urlSupa=
+      #- PW_apikey=
+      #- PW_user=
+      #- PW_password=
+      #- PW_host=
+      #- PW_database=
+      #- PW_portdb=
     volumes:
       - .:/app
     networks:

@@ -23,7 +23,7 @@ def headersSupa():
 
 
 app = Flask(__name__)
-SERVICE_SECRET="3b9bd72f20b59444a4a90805f3d5c47f68c357471c838ed50bc4bc5cc8f99161"
+SERVICE_SECRET= os.getenv("SERVICE_SECRET", "")
 @app.route('/', methods=['POST'])
 def index():
     global SERVICE_SECRET
