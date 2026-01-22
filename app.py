@@ -62,7 +62,18 @@ def index():
     if response.status_code not in [200, 201, 204, 202]:
         print(f"Failed to log error: {response.status_code} - {response.text}", file=sys.stderr)
     
+    url = "http://prefect-worker:4200/api/deployments/e7ba2f03-1fe8-4e0c-8531-b560568f4e14/create_flow_run"
 
+    # Definimos el cuerpo de la petición (el "null" de JSON es "None" en Python)
+    payload = {
+        "state": None
+    }
+
+    # Definimos las cabeceras
+    headers = {
+        "Content-Type": "application/json"
+    }
+    response = requests.post(url, json=payload, headers=headers)
     return "OK", 200
 
 if __name__ == '__main__':
